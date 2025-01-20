@@ -54,4 +54,5 @@ jspm_packages/
 # Aider AI Chat
 .aider*
 
-hotel_recommendation_system/toy_bundle_recommenders.pkl
+hotel_recommendation_system/*.pkl
+*.pkl
