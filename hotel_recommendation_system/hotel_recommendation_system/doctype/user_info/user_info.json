@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "creation": "2025-01-11 15:22:34.445723",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kz6t",
+  "amended_from",
+  "num_adults",
+  "num_children",
+  "num_infants",
+  "arrival_month",
+  "num_nights",
+  "weekend",
+  "holiday",
+  "customer_origin",
+  "hotel_name",
+  "state",
+  "tab_2_tab",
+  "route",
+  "publish"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kz6t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Info",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "num_adults",
+   "fieldtype": "Int",
+   "label": "num_adults"
+  },
+  {
+   "fieldname": "num_children",
+   "fieldtype": "Int",
+   "label": "num_children"
+  },
+  {
+   "fieldname": "hotel_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "hotel_name",
+   "options": "VinHolidays Fiesta Ph\u00fa Qu\u1ed1c\nVinpearl Luxury Nha Trang\nVinpearl Beachfront Nha Trang\nVinpearl Wonderworld Ph\u00fa Qu\u1ed1c\nVinpearl Resort & Spa H\u1ea1 Long\nVinpearl Resort Nha Trang\nVinpearl Resort & Spa Nha Trang Bay\nVinpearl Resort & Golf Nam H\u1ed9i An\nVinpearl Resort & Spa Ph\u00fa Qu\u1ed1c\nH\u00f2n T\u1eb1m Resort",
+   "reqd": 1
+  },
+  {
+   "fieldname": "num_infants",
+   "fieldtype": "Int",
+   "label": "num_infants"
+  },
+  {
+   "fieldname": "arrival_month",
+   "fieldtype": "Int",
+   "label": "arrival_month"
+  },
+  {
+   "fieldname": "num_nights",
+   "fieldtype": "Int",
+   "label": "num_nights"
+  },
+  {
+   "default": "0",
+   "fieldname": "weekend",
+   "fieldtype": "Check",
+   "label": "weekend"
+  },
+  {
+   "default": "0",
+   "fieldname": "holiday",
+   "fieldtype": "Check",
+   "label": "holiday"
+  },
+  {
+   "fieldname": "customer_origin",
+   "fieldtype": "Select",
+   "label": "customer_origin",
+   "options": "North\nSouth\nMiddle\nOverseas"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "state",
+   "options": "2 weeks before going\n1 week before going\nCurrently going"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "publish"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "publish",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-13 13:49:47.114332",
+ "modified_by": "Administrator",
+ "module": "Hotel Recommendation System",
+ "name": "User Info",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "route": "user_info",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

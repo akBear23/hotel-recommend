@@ -1,0 +1,22 @@
+<!-- <div>
+	<a href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a> -->
+<!-- </div> -->
+<!-- this is a sample default list template -->
+
+<!-- Image with alt text -->
+<!-- <img src="{{ doc.image }}" alt="{{ doc.name }}" style="max-width: 100%; height: auto;"> -->
+
+<!-- Link with text -->
+<!-- <a href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a> -->
+
+
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start;">
+    <img src="{{ doc.image }}" alt="{{ doc.name }}" style="max-width: 200px; height: auto;">
+    <div>
+        <a href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a>
+
+		<a href="/user-input-form?hotel_name={{ doc.name }}" class="btn btn-primary">
+            Input Your Information
+        </a>
+    </div>
+</div>

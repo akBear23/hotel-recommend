@@ -5,6 +5,24 @@ app_description = "hotel recommendation system"
 app_email = "ankhanh@gmail.com"
 app_license = "mit"
 
+from frappe import _
+
+def get_context(context):
+    # Fetch the packages query parameter
+    packages = frappe.form_dict.get("packages")
+    if not packages:
+        frappe.throw(_("No packages found."))
+
+    # Parse the packages data
+    context.packages = frappe.parse_json(packages)
+
+# Attach the controller to the Packages Web Page
+def get_hooks():
+    return {
+        "web_page": {
+            "Packages": "custom_app.custom_app.hooks.get_context"
+        }
+    }
 # Apps
 # ------------------
 
@@ -177,9 +195,9 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "hotel_recommendation_system.event.get_events"
-# }
+override_whitelisted_methods = {
+    "hotel_recommendation_system.api.submit_user_info": "hotel_recommendation_system.api.submit_user_info"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

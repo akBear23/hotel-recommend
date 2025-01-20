@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-11 14:49:36.203644",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "num_adults",
+  "num_children",
+  "num_infants",
+  "arrival_month",
+  "num_nights",
+  "int_yrir",
+  "holiday",
+  "customer_origin"
+ ],
+ "fields": [
+  {
+   "fieldname": "num_adults",
+   "fieldtype": "Int",
+   "label": "num_adults"
+  },
+  {
+   "fieldname": "num_children",
+   "fieldtype": "Int",
+   "label": "num_children"
+  },
+  {
+   "fieldname": "num_infants",
+   "fieldtype": "Int",
+   "label": "num_infants"
+  },
+  {
+   "fieldname": "arrival_month",
+   "fieldtype": "Int",
+   "label": "arrival_month"
+  },
+  {
+   "fieldname": "num_nights",
+   "fieldtype": "Int",
+   "label": "num_nights"
+  },
+  {
+   "default": "0",
+   "fieldname": "int_yrir",
+   "fieldtype": "Check",
+   "label": "weekend"
+  },
+  {
+   "default": "0",
+   "fieldname": "holiday",
+   "fieldtype": "Check",
+   "label": "Holiday"
+  },
+  {
+   "default": "North",
+   "fieldname": "customer_origin",
+   "fieldtype": "Select",
+   "label": "customer_origin",
+   "options": "North\nSouth\nMiddle\nOverseas"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-11 14:56:30.695160",
+ "modified_by": "Administrator",
+ "module": "Hotel Recommendation System",
+ "name": "User Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

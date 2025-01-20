@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title |e }}</h1>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+    <!-- Image on the left -->
+    <img src="{{ image }}" alt="{{ title }}" style="max-width: 200px; height: auto; flex-shrink: 0;">
+
+    <!-- Text on the right -->
+    <div>
+        <!-- <h2>{{ title }}</h2> -->
+        <p>{{ description }}</p>
+    </div>
+</div>
+<!-- Back Button -->
+<a href="/route/" class="btn btn-default">Back</a>
+
+{% endblock %}
