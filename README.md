@@ -12,6 +12,13 @@ bench get-app $URL_OF_THIS_REPO --branch develop
 bench install-app hotel_recommendation_system
 ```
 
+### Usage
+You have to make sure that the version of the libraries in your bench is correct!
+Call model API at 
+```bash
+localhost/api/method/hotel_recommendation_system.api.submit_user_info
+```
+
 ### Contributing
 
 This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
