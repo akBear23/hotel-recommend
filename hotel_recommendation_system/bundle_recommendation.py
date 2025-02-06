@@ -172,8 +172,8 @@ def upsale(
     
 if __name__ == "__main__":
     # here is an example for getting bundle recommendation
-    recommended_bundles = bundle_reccommendation(
-        hotel_name='Vinpearl Wonderworld Phú Quốc', # refer to the cell belows for possible values
+    recommended_bundles = upsale(
+        hotel_name='Vinpearl Wonderworld Phú Quốc', # refer to the cell belows for possible values['Safari Package / Safari Package', 'The Delight Res Package NL Toi / The Delight Res Food DIN', 'The Delight Res Package TE Sang / The Delight Res Package Child BKF', 'VAP Package  / VAP Package', 'Van chuyen NL Package / Shuttle Bus Adult Package']
         num_of_adults=2,
         num_of_childrens=0,
         num_of_infants=0,
@@ -181,6 +181,7 @@ if __name__ == "__main__":
         num_nights=2,
         weekend=True,
         holiday=False,
+        bought_items=['Safari Package / Safari Package', 'The Delight Res Package NL Toi / The Delight Res Food DIN', 'The Delight Res Package TE Sang / The Delight Res Package Child BKF', 'VAP Package  / VAP Package', 'Van chuyen NL Package / Shuttle Bus Adult Package'],
         customer_origin='North' # or 'South', or 'Midle', or 'Oversea'
     )
     print(recommended_bundles)

@@ -21,7 +21,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2025-02-06 22:01:45.153741",
+ "modified": "2025-02-06 23:50:27.751906",
  "modified_by": "Administrator",
  "module": "Hotel Recommendation System",
  "name": "user-input-form",
@@ -32,7 +32,7 @@
  "show_list": 0,
  "show_sidebar": 0,
  "success_title": "Information saved",
- "success_url": "",
+ "success_url": "/packages",
  "title": "User Information Form",
  "web_form_fields": [
   {
