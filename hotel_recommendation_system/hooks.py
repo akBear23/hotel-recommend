@@ -5,24 +5,7 @@ app_description = "hotel recommendation system"
 app_email = "ankhanh@gmail.com"
 app_license = "mit"
 
-from frappe import _
 
-def get_context(context):
-    # Fetch the packages query parameter
-    packages = frappe.form_dict.get("packages")
-    if not packages:
-        frappe.throw(_("No packages found."))
-
-    # Parse the packages data
-    context.packages = frappe.parse_json(packages)
-
-# Attach the controller to the Packages Web Page
-def get_hooks():
-    return {
-        "web_page": {
-            "Packages": "custom_app.custom_app.hooks.get_context"
-        }
-    }
 # Apps
 # ------------------
 

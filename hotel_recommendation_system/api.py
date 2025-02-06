@@ -14,28 +14,29 @@ def load_model():
 
 @frappe.whitelist(allow_guest=True)
 def submit_user_info(num_adults, num_children, num_infants, arrival_month, num_nights, weekend, holiday, customer_origin, hotel_name):
-    try:
+    print(num_adults, num_children, num_infants, arrival_month, num_nights, weekend, holiday, customer_origin, hotel_name)
 
+    # try:
         # Call the AI model to generate packages
-        packages = bundle_recommendation(
-                    hotel_name=hotel_name,
-                    num_of_adults=num_adults,
-                    num_of_childrens=num_children,
-                    num_of_infants=num_infants,
-                    arrival_month=arrival_month,
-                    num_nights=num_nights,
-                    weekend=weekend,
-                    holiday=holiday,
-                    customer_origin=customer_origin
-                )
-        print(packages)
-        if packages:
-            return {"packages": packages}
-        else:
-            return {"error": _("No packages found.")}
-    except Exception as e:
-        frappe.log_error(frappe.get_traceback(), _("User Info Submission Error"))
-        return {"error": _("An error occurred. Please try again.")}
+    packages = bundle_recommendation(
+                hotel_name=hotel_name,
+                num_of_adults=int(num_adults),
+                num_of_childrens=int(num_children),
+                num_of_infants=int(num_infants),
+                arrival_month=int(arrival_month),
+                num_nights=int(num_nights),
+                weekend=int(weekend),
+                holiday=int(holiday),
+                customer_origin=customer_origin
+            )
+    print(packages)
+    if packages:
+        return {"packages": packages}
+    else:
+        return {"error": _("No packages found.")}
+    # except Exception as e:
+    #     frappe.log_error(frappe.get_traceback(), _("User Info Submission Error"))
+    #     return {"error": _("An error occurred. Please try again.")}
     
 @frappe.whitelist(allow_guest=True)
 def ping():
