@@ -2,34 +2,26 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "field:hotel_name",
- "creation": "2025-01-11 16:03:52.827765",
+ "autoname": "field:location_name",
+ "creation": "2025-02-07 14:14:31.638458",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "hotel_name",
+  "location_name",
   "image",
+  "up_coming_event",
   "description",
+  "other_image_1",
+  "other_image_2",
   "tab_2_tab",
   "route",
   "public"
  ],
  "fields": [
   {
-   "fieldname": "hotel_name",
-   "fieldtype": "Data",
-   "label": "Hotel Name",
-   "unique": 1
-  },
-  {
    "fieldname": "image",
    "fieldtype": "Attach Image",
    "label": "Image"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "label": "Description"
   },
   {
    "fieldname": "tab_2_tab",
@@ -39,22 +31,48 @@
   {
    "fieldname": "route",
    "fieldtype": "Data",
-   "label": "Route"
+   "label": "Location"
   },
   {
    "default": "0",
    "fieldname": "public",
    "fieldtype": "Check",
    "label": "Public"
+  },
+  {
+   "fieldname": "up_coming_event",
+   "fieldtype": "Text Editor",
+   "label": "Up coming Event"
+  },
+  {
+   "fieldname": "location_name",
+   "fieldtype": "Data",
+   "label": "Location Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "other_image_1",
+   "fieldtype": "Attach Image",
+   "label": "Other Image 1"
+  },
+  {
+   "fieldname": "other_image_2",
+   "fieldtype": "Attach Image",
+   "label": "Other Image 2"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
  "has_web_view": 1,
  "is_published_field": "public",
  "links": [],
- "modified": "2025-02-07 14:12:36.303765",
+ "modified": "2025-02-07 16:07:44.288703",
  "modified_by": "Administrator",
  "module": "Hotel Recommendation System",
- "name": "Hotels",
+ "name": "Locations",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -71,7 +89,7 @@
    "write": 1
   }
  ],
- "route": "route",
+ "route": "location",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

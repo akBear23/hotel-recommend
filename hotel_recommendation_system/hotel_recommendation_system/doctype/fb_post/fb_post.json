@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-08 15:29:31.512600",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fb_post_id",
+  "create_at",
+  "update_at",
+  "create_at_fb",
+  "content",
+  "group_id",
+  "is_crawled",
+  "is_related",
+  "tag",
+  "num_like",
+  "num_share",
+  "url",
+  "num_comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "fb_post_id",
+   "fieldtype": "Data",
+   "label": "fb_post_id"
+  },
+  {
+   "fieldname": "create_at",
+   "fieldtype": "Datetime",
+   "label": "create_at"
+  },
+  {
+   "fieldname": "update_at",
+   "fieldtype": "Datetime",
+   "label": "update_at"
+  },
+  {
+   "fieldname": "create_at_fb",
+   "fieldtype": "Datetime",
+   "label": "create_at_fb"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Data",
+   "label": "content"
+  },
+  {
+   "fieldname": "group_id",
+   "fieldtype": "Data",
+   "label": "group_id"
+  },
+  {
+   "fieldname": "is_crawled",
+   "fieldtype": "Int",
+   "label": "is_crawled"
+  },
+  {
+   "fieldname": "is_related",
+   "fieldtype": "Int",
+   "label": "is_related"
+  },
+  {
+   "fieldname": "tag",
+   "fieldtype": "Data",
+   "label": "tag"
+  },
+  {
+   "fieldname": "num_like",
+   "fieldtype": "Int",
+   "label": "num_like"
+  },
+  {
+   "fieldname": "num_share",
+   "fieldtype": "Int",
+   "label": "num_share"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "url"
+  },
+  {
+   "fieldname": "num_comment",
+   "fieldtype": "Int",
+   "label": "num_comment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-08 15:38:33.987837",
+ "modified_by": "Administrator",
+ "module": "Hotel Recommendation System",
+ "name": "FB_Post",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,83 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<style>
+    .location-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;  /* Thêm position relative để định vị button */
+    }
+    
+    .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 8px 20px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .back-button:hover {
+        background-color: #357abd;
+    }
+    
+    .location-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+    
+    .location-content {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .location-image {
+        flex: 0 0 400px;
+    }
+    
+    .location-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .location-info {
+        flex: 1;
+    }
+    
+    .events-content {
+        line-height: 1.6;
+    }
+</style>
+
+<div class="location-container">
+    <button onclick="window.location.href='/location'" class="back-button">
+        Back
+    </button>
+
+    <h1 class="location-title">{{ doc.location_name }}</h1>
+    
+    <div class="location-content">
+        <div class="location-image">
+            <img src="{{ doc.image }}" alt="{{ doc.location_name }}">
+        </div>
+        
+        <div class="location-info">
+            <div class="events-content">
+                {{ doc.up_coming_event }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

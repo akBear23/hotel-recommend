@@ -1,0 +1,105 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+
+<style>
+    .guide-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .back-button {
+        background-color: #4a90e2;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    
+    .back-button:hover {
+        background-color: #357abd;
+    }
+    
+    .main-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .guide-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .guide-description {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 40px;
+        text-align: justify;
+    }
+    
+    .gallery-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .gallery-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s;
+    }
+    
+    .gallery-image:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .image-gallery {
+            grid-template-columns: 1fr;
+        }
+        
+        .main-image {
+            height: 300px;
+        }
+    }
+</style>
+
+<div class="guide-container">
+    <a href="/location" class="back-button">← Back to Location List</a>
+    
+    <img class="main-image" src="{{ frappe.form_dict.image }}" alt="{{ frappe.form_dict.title }}">
+    
+    <h1 class="guide-title">{{ frappe.form_dict.title }}</h1>
+    
+    <div class="guide-description">
+        {{ frappe.form_dict.description }}
+    </div>
+    
+    
+    <div class="image-gallery">
+        <img class="gallery-image" src="{{ frappe.form_dict.image1 }}" alt="Gallery image 1">
+        <img class="gallery-image" src="{{ frappe.form_dict.image2 }}" alt="Gallery image 2">
+    </div>
+</div>
+
+{% endblock %}

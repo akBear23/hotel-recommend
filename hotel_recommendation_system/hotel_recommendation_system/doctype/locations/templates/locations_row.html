@@ -1,0 +1,111 @@
+<style>
+	.product-list {
+		max-width: 1000px;
+		margin: 20px auto;
+	}
+	
+	.product-item {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		margin-bottom: 25px;
+		padding: 15px;
+		border: 1px solid #eee;
+		border-radius: 8px;
+	}
+	
+	.product-image {
+		width: 300px;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+	
+	.product-info {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	
+	.product-title {
+		text-decoration: none;
+		color: #333;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	
+	.product-title:hover {
+		color: #4a90e2;
+	}
+ 
+	.button-group {
+		display: flex;
+		gap: 15px;
+		margin-top: 10px;
+	}
+ 
+	.btn {
+		padding: 8px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 14px;
+	}
+ 
+	.btn-guide {
+		background-color: #4CAF50;
+		color: white;
+	}
+ 
+	.btn-events {
+		background-color: #4a90e2;
+		color: white;
+	}
+ 
+	.btn:hover {
+		opacity: 0.9;
+	}
+
+	.product-info {
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+       position: relative;
+       width: 100%;
+   }
+   
+   .btn-travel {
+       background-color: #FF5722;
+       color: white;
+       position: absolute;
+       right: 0;
+       top: 0;
+       padding: 12px 30px;      /* Tăng padding để nút to hơn */
+       font-size: 16px;         /* Tăng font size */
+       font-weight: 500;        /* Làm chữ đậm hơn */
+       letter-spacing: 0.5px;   /* Tăng khoảng cách chữ */
+       text-transform: uppercase; /* Chữ in hoa */
+   }
+
+   .btn-travel:hover {
+       background-color: #f4511e; /* Màu hover đậm hơn một chút */
+       transform: scale(1.05);    /* Hiệu ứng phóng to nhẹ khi hover */
+       transition: all 0.2s;      /* Hiệu ứng mượt mà */
+   }
+ </style>
+ 
+ <div class="product-list">
+    <div class="product-item">
+        <img class="product-image" src="{{ doc.image }}" alt="{{ doc.name }}">
+        <div class="product-info">
+            <a class="product-title" href="/{{ doc.route |e }}">{{ (doc.title or doc.name) |e }}</a>
+            <div class="button-group">
+                <a class="btn btn-guide" href="/travel-guide/{{ doc.route.split('/')[-1] }}?title={{ doc.location_name | urlencode }}&description={{ doc.description | urlencode }}&image1={{ doc.other_image_1 | urlencode }}&image2={{ doc.other_image_2 | urlencode }}&image={{ doc.image | urlencode }}">Cẩm nang du lịch</a>
+                <a class="btn btn-events" href="/{{ doc.route |e }}">Sự kiện sắp tới</a>
+                <a class="btn btn-travel" href="/user-input-form?location={{ doc.location_name | urlencode }}">Du lịch</a>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- this is a sample default list template -->
